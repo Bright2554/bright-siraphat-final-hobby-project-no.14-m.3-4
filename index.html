@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Bright's Hobbies — art, music, and games. Explore my favorite ways to spend free time: drawing, listening to music, and gaming.">
+    <title>Bright's Hobbies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <h1>
+                <span style="font-size:1.1em;vertical-align:middle;">✨</span>
+                Siraphat "Bright" Luenaruekul
+                <span style="font-size:1.1em;vertical-align:middle;">✨</span>
+            </h1>
+            <p class="subtitle">Discover passions, creativity, and my favorite ways to spend free time!</p>
+
+            <nav aria-label="Primary" class="primary-nav">
+                <ul>
+                    <li><a href="index.html" class="current" aria-current="page">Home</a></li>
+                    <li><a href="drawing.html">Drawing</a></li>
+                    <li><a href="music.html">Music</a></li>
+                    <li><a href="games.html">Games</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="home-main" id="content">
+        <!-- Welcome Section -->
+        <section class="about-me" aria-labelledby="about-heading">
+            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=400&q=80"
+                 alt="Profile photo of Bright"
+                 class="profile-img">
+            <div>
+                <h2 id="about-heading">
+                    Welcome to My Creative Space
+                </h2>
+                <p>
+                    Hi, I'm Bright, a creative soul who loves expressing myself through art, sound, and play!
+                    My hobbies are all about letting my imagination soar, finding peace and energy, and connecting with people.
+                </p>
+                <p>
+                    Whether I'm sketching characters from my favorite games, building worlds in Roblox, or curating the perfect playlist, every hobby brings out a new side of who I am.
+                    Thank you for stopping by—explore below to see how I fill my life with color, rhythm, and play!
+                </p>
+            </div>
+        </section>
+
+        <!-- Quick Stats Section -->
+        <section class="stats-section">
+            <h2 style="grid-column: 1 / -1; text-align: center;">A Glimpse Into My Creative Journey</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Years Drawing</div>
+                    <p class="stat-desc">From pencil sketches to digital masterpieces</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">6+</div>
+                    <div class="stat-label">Years Gaming</div>
+                    <p class="stat-desc">Adventures in virtual worlds and epic battles</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Playlists</div>
+                    <p class="stat-desc">Curated soundtracks for every mood</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Creative Mind</div>
+                    <p class="stat-desc">Always dreaming, always creating</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Hobbies Grid -->
+        <section class="hobbies-section" aria-labelledby="hobbies-heading">
+            <h2 id="hobbies-heading" style="grid-column: 1 / -1; text-align: center;">
+                My Favorite Hobbies
+            </h2>
+
+            <ul class="hobbies-grid" role="list">
+                <li role="listitem">
+                    <a href="drawing.html">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Drawing reference image">
+                        <span>Drawing</span>
+                    </a>
+                </li>
+
+                <li role="listitem">
+                    <a href="music.html">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80" alt="Music listening image">
+                        <span>Listening to Music</span>
+                    </a>
+                </li>
+
+                <li role="listitem">
+                    <a href="games.html">
+                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=400&q=80" alt="Gaming image">
+                        <span>Playing Games</span>
+                    </a>
+                </li>
+            </ul>
+
+            <hr class="section-divider" aria-hidden="true">
+        </section>
+
+        <!-- MINIGAME SECTION -->
+        <section class="minigame-section">
+            <h2>Try My Quick Minigame</h2>
+            <p class="minigame-subtitle">Test your reflexes and see how high you can score!</p>
+            
+            <div class="minigame-container">
+                <div class="game-info">
+                    <div class="game-stat">
+                        <span class="stat-label">Score</span>
+                        <span class="stat-value" id="gameScore">0</span>
+                    </div>
+                    <div class="game-stat">
+                        <span class="stat-label">Time</span>
+                        <span class="stat-value" id="gameTime">30</span>
+                    </div>
+                    <div class="game-stat">
+                        <span class="stat-label">Level</span>
+                        <span class="stat-value" id="gameLevel">1</span>
+                    </div>
+                </div>
+
+                <div class="game-board" id="gameBoard">
+                    <!-- Game squares will be generated here -->
+                </div>
+
+                <div class="game-controls">
+                    <button id="startGameBtn" class="game-btn game-btn-start">Start Game</button>
+                    <button id="restartGameBtn" class="game-btn game-btn-restart" style="display: none;">Play Again</button>
+                </div>
+
+                <div id="gameMessage" class="game-message"></div>
+            </div>
+
+            <div class="game-instructions">
+                <h4>How to Play</h4>
+                <ul>
+                    <li>Click on the colored squares as fast as you can</li>
+                    <li>Each correct click increases your score</li>
+                    <li>You have 30 seconds to get the highest score possible</li>
+                    <li>Game gets faster as you level up</li>
+                    <li>Miss and your combo resets</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Inspiration Section -->
+        <section class="inspiration-section">
+            <h2>Where Does My Inspiration Come From?</h2>
+            <div class="inspiration-grid">
+                <div class="inspiration-card">
+                    <div class="inspiration-icon">M</div>
+                    <h3>Movies & Stories</h3>
+                    <p>Watching films and reading stories sparks endless ideas for my art and game choices</p>
+                </div>
+                <div class="inspiration-card">
+                    <div class="inspiration-icon">P</div>
+                    <h3>People & Community</h3>
+                    <p>Friends inspire me daily through shared experiences and creative collaboration</p>
+                </div>
+                <div class="inspiration-card">
+                    <div class="inspiration-icon">W</div>
+                    <h3>The World Around Me</h3>
+                    <p>Nature, culture, and everyday moments become subjects in my creative work</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Interests -->
+        <section class="skills-section">
+            <h2>Skills & Interests</h2>
+            <div class="skills-container">
+                <div class="skills-column">
+                    <h3>Creative Skills</h3>
+                    <ul class="skills-list">
+                        <li>Digital Illustration</li>
+                        <li>Character Design</li>
+                        <li>Traditional Drawing</li>
+                        <li>Color Theory</li>
+                        <li>Conceptual Art</li>
+                    </ul>
+                </div>
+                <div class="skills-column">
+                    <h3>Gaming Expertise</h3>
+                    <ul class="skills-list">
+                        <li>Strategic Planning</li>
+                        <li>Teamwork & Communication</li>
+                        <li>Game Design Concepts</li>
+                        <li>Quick Problem Solving</li>
+                        <li>Competitive Spirit</li>
+                    </ul>
+                </div>
+                <div class="skills-column">
+                    <h3>Musical Taste</h3>
+                    <ul class="skills-list">
+                        <li>K-Pop & Pop</li>
+                        <li>Lo-Fi Chill Hop</li>
+                        <li>Video Game OSTs</li>
+                        <li>Thai Acoustic</li>
+                        <li>Playlist Curation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Works Section -->
+        <section class="featured-section">
+            <h2>Featured Highlights</h2>
+            <div class="featured-grid">
+                <div class="featured-card featured-drawing">
+                    <div class="featured-content">
+                        <h3>Digital Art Collection</h3>
+                        <p>Explore my evolving journey from traditional sketches to stunning digital artwork</p>
+                        <a href="drawing.html" class="featured-link">View My Art</a>
+                    </div>
+                </div>
+                <div class="featured-card featured-music">
+                    <div class="featured-content">
+                        <h3>Music Playlists</h3>
+                        <p>Discover curated playlists that define different moments and moods in my life</p>
+                        <a href="music.html" class="featured-link">Hear My Picks</a>
+                    </div>
+                </div>
+                <div class="featured-card featured-games">
+                    <div class="featured-content">
+                        <h3>Gaming Adventures</h3>
+                        <p>From competitive MOBAs to story-rich experiences, here are my favorite games</p>
+                        <a href="games.html" class="featured-link">Play With Me</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact/Connect Section -->
+        <section class="connect-section">
+            <h2>Let's Connect!</h2>
+            <p>I love sharing my creative journey and connecting with people who have similar passions. Whether you want to discuss art, games, music, or anything creative—feel free to reach out!</p>
+            <div class="connect-buttons">
+                <button class="connect-btn" onclick="alert('Email: bright@example.com')">Get In Touch</button>
+                <a href="drawing.html" class="connect-btn connect-btn-secondary">See My Work</a>
+            </div>
+        </section>
+
+        <!-- Testimonial/Quote Section -->
+        <aside class="quote" aria-label="Quote">
+            <span style="font-size:1.3em;vertical-align:middle;">-</span>
+            <em>"Life is a canvas, and my hobbies are the colors I paint it with. Every moment is an opportunity to create, learn, and grow."</em>
+        </aside>
+    </main>
+
+    <footer>
+        <nav aria-label="Footer">
+            <a href="index.html" class="current">Home</a>
+            <a href="drawing.html">Drawing</a>
+            <a href="music.html">Music</a>
+            <a href="games.html">Games</a>
+        </nav>
+        <p>&copy; 2025 Bright's Hobbies. All rights reserved.</p>
+    </footer>
+
+    <script src="decorations.js"></script>
+    <script src="page-transitions-advanced.js"></script>
+    <script src="minigame.js"></script>
+</body>
+</html>
