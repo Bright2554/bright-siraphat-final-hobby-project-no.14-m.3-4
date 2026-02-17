@@ -1,5 +1,3 @@
-// Minigame - Color Click Challenge
-
 class ColorClickGame {
     constructor() {
         this.score = 0;
@@ -73,27 +71,27 @@ class ColorClickGame {
         this.createBoard();
         this.shuffleBoard();
         
-        // Start timer
+        
         this.timerInterval = setInterval(() => this.updateTimer(), 1000);
     }
     
     handleSquareClick(square) {
         if (!this.gameActive) return;
         
-        // Add click animation
+       
         square.classList.add('clicked');
         setTimeout(() => square.classList.remove('clicked'), 150);
         
-        // Increase score
+        
         this.score += (10 * this.level);
         this.updateDisplay();
         
-        // Check level progression
+        
         if (this.score % 200 === 0 && this.score > 0) {
             this.levelUp();
         }
         
-        // Shuffle and respawn
+    
         setTimeout(() => this.shuffleBoard(), this.clickDelay);
     }
     
@@ -102,17 +100,17 @@ class ColorClickGame {
         
         const squares = Array.from(this.gameBoard.children);
         
-        // Shuffle array
+        
         for (let i = squares.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [squares[i], squares[j]] = [squares[j], squares[i]];
         }
         
-        // Reassign colors randomly
+        
         squares.forEach(square => {
             square.style.backgroundColor = this.colors[Math.floor(Math.random() * this.colors.length)];
             square.classList.remove('active');
-            void square.offsetWidth; // Trigger reflow
+            void square.offsetWidth; 
             square.classList.add('active');
         });
     }
@@ -122,7 +120,7 @@ class ColorClickGame {
         this.clickDelay = Math.max(400, this.clickDelay - 100);
         this.updateDisplay();
         
-        // Add level up effect
+        
         const message = document.createElement('div');
         message.className = 'level-up-message';
         message.textContent = `LEVEL ${this.level}!`;
@@ -146,7 +144,7 @@ class ColorClickGame {
         
         this.restartBtn.style.display = 'inline-block';
         
-        // Show final message
+        
         const finalScore = this.score;
         const finalLevel = this.level;
         this.gameMessage.innerHTML = `
@@ -157,7 +155,7 @@ class ColorClickGame {
             </div>
         `;
         
-        // Disable board
+        
         this.gameBoard.style.pointerEvents = 'none';
         this.gameBoard.style.opacity = '0.5';
     }
@@ -169,7 +167,7 @@ class ColorClickGame {
     }
 }
 
-// Initialize game when DOM is ready
+
 document.addEventListener('DOMContentLoaded', () => {
     new ColorClickGame();
 });

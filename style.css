@@ -1,5 +1,5 @@
 :root {
-    /* New vibrant color theme */
+
     --bg1: #0f1419;
     --bg2: #1a1f2e;
     --primary: #9d4edd;
@@ -40,7 +40,7 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-/* Multi-layer background effects */
+
 body::before {
     content: "";
     position: fixed;
@@ -72,7 +72,7 @@ body::before {
     }
 }
 
-/* Animated grid overlay */
+
 body::after {
     content: "";
     position: fixed;
@@ -99,7 +99,7 @@ main, footer {
     z-index: 2;
 }
 
-/* ====== HEADER STYLES ====== */
+
 header {
     padding: 3rem 1rem 1.5rem 1rem;
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, var(--accent-teal) 100%);
@@ -111,7 +111,7 @@ header {
     overflow: hidden;
 }
 
-/* Header decorative patterns */
+
 header::before {
     content: "";
     position: absolute;
@@ -152,7 +152,7 @@ header h1 {
     background-clip: text;
 }
 
-/* Decorative corner elements */
+
 header h1::before {
     content: "";
     position: absolute;
@@ -286,7 +286,7 @@ header:hover h1::after {
     }
 }
 
-/* ====== MAIN CONTENT ====== */
+
 main.home-main {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
@@ -315,7 +315,7 @@ main.home-main {
     transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* Decorative corner orbs */
+
 .about-me::before {
     content: "";
     position: absolute;
@@ -549,7 +549,7 @@ main.home-main {
     box-shadow: 0 8px 24px rgba(0, 217, 255, 0.4), inset 0 0 15px rgba(0, 217, 255, 0.2);
 }
 
-/* ====== GAME CARDS ====== */
+
 
 .games-section {
     display: flex;
@@ -744,7 +744,7 @@ main.home-main {
     }
 }
 
-/* ====== HOBBY PAGES ====== */
+
 
 main.hobby-main {
     display: flex;
@@ -962,7 +962,7 @@ aside strong {
     font-weight: 900;
 }
 
-/* ====== STATS SECTION ====== */
+
 
 .stats-section {
     display: grid;
@@ -1042,7 +1042,7 @@ aside strong {
     line-height: 1.5;
 }
 
-/* ====== HOBBIES SECTION ====== */
+
 
 .hobbies-section {
     display: grid;
@@ -1050,7 +1050,7 @@ aside strong {
     padding: 2rem 0;
 }
 
-/* ====== INSPIRATION SECTION ====== */
+
 
 .inspiration-section {
     background: linear-gradient(135deg, rgba(30, 33, 57, 0.9) 0%, rgba(90, 24, 154, 0.15) 100%);
@@ -1131,7 +1131,7 @@ aside strong {
     margin: 0;
 }
 
-/* ====== SKILLS SECTION ====== */
+
 
 .skills-section {
     padding: 3rem 2rem;
@@ -1206,7 +1206,7 @@ aside strong {
     padding-left: 2rem;
 }
 
-/* ====== FEATURED SECTION ====== */
+
 
 .featured-section {
     padding: 3rem 2rem;
@@ -1318,7 +1318,7 @@ aside strong {
     border-color: var(--accent-gold);
 }
 
-/* ====== CONNECT SECTION ====== */
+
 
 .connect-section {
     background: linear-gradient(135deg, var(--primary-light) 0%, var(--accent-teal) 50%, var(--accent-gold) 100%);
@@ -1409,7 +1409,7 @@ aside strong {
     color: var(--accent-teal);
 }
 
-/* ====== QUOTE SECTION ====== */
+
 
 .quote {
     margin: 3rem auto 1rem auto;
@@ -1444,7 +1444,7 @@ aside strong {
     text-shadow: 0 0 15px rgba(0, 217, 255, 0.2);
 }
 
-/* ====== RESPONSIVE ====== */
+
 
 @media (max-width: 900px) {
     .stats-grid,
@@ -1492,7 +1492,7 @@ aside strong {
     }
 }
 
-/* ====== FOOTER ====== */
+
 
 footer {
     background: linear-gradient(180deg, rgba(15, 20, 25, 0.98) 0%, rgba(26, 31, 46, 0.98) 100%);
@@ -1578,7 +1578,7 @@ footer p {
     color: var(--text-secondary);
 }
 
-/* ====== HEADINGS ====== */
+
 
 h2, h3 {
     color: var(--accent-teal);
@@ -1654,7 +1654,7 @@ ul {
     padding-left: 1.3em;
 }
 
-/* ====== DIVIDERS ====== */
+
 
 hr {
     border: none;
@@ -1675,7 +1675,7 @@ hr {
     box-shadow: 0 0 25px rgba(0, 217, 255, 0.4), 0 0 50px rgba(157, 78, 221, 0.2);
 }
 
-/* ====== MINIGAME SECTION ====== */
+
 
 .minigame-section {
     background: linear-gradient(135deg, rgba(30, 33, 57, 0.95) 0%, rgba(90, 24, 154, 0.2) 100%);
@@ -2007,7 +2007,7 @@ hr {
     font-size: 1.2em;
 }
 
-/* ====== RESPONSIVE ====== */
+
 
 @media (max-width: 800px) {
     .game-board {
@@ -2041,7 +2041,7 @@ hr {
     }
 }
 
-/* ====== RESPONSIVE ====== */
+
 
 @media (max-width: 600px) {
     body, .about-me, .hobbies-list, main, .hobby-content, .hobby-table-section {

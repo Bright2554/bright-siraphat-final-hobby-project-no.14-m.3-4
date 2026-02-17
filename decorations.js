@@ -1,5 +1,3 @@
-// Decorations.js - Advanced interactive enhancements for Bright's Hobbies website
-
 document.addEventListener('DOMContentLoaded', function() {
     initAdvancedParticles();
     initCardInteractions();
@@ -10,11 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
     initCursorFollower();
 });
 
-// Advanced floating particles with multiple layers
+
 function initAdvancedParticles() {
     const container = document.body;
     
-    // Create multiple layers of decorative particles
+    
     for (let layer = 0; layer < 3; layer++) {
         for (let i = 0; i < 6; i++) {
             const particle = document.createElement('div');
@@ -46,7 +44,7 @@ function initAdvancedParticles() {
         }
     }
     
-    // Add keyframe animations
+    
     if (!document.querySelector('style[data-particles]')) {
         const style = document.createElement('style');
         style.setAttribute('data-particles', 'true');
@@ -90,7 +88,7 @@ function initAdvancedParticles() {
     }
 }
 
-// Enhanced card interactions with multiple effects
+
 function initCardInteractions() {
     const cards = document.querySelectorAll('.hobbies-grid li, .game-card, .about-me');
     
@@ -105,19 +103,19 @@ function initCardInteractions() {
             this.style.filter = 'drop-shadow(0 0 0px rgba(0, 217, 255, 0))';
         });
         
-        // Add ripple effect on click
+        
         card.addEventListener('click', function(e) {
             createAdvancedRipple(e);
         });
         
-        // Add light pulse on hover
+        
         card.addEventListener('mouseenter', function() {
             this.style.animation = 'glow-pulse 0.6s ease-in-out';
         });
     });
 }
 
-// Advanced ripple effect with multiple rings
+
 function createAdvancedRipple(event) {
     const card = event.currentTarget;
     
@@ -142,7 +140,7 @@ function createAdvancedRipple(event) {
                 animation: ripple-wave 0.8s ease-out forwards;
             `;
             
-            // Add ripple animation if not exists
+            
             if (!document.querySelector('style[data-ripple]')) {
                 const style = document.createElement('style');
                 style.setAttribute('data-ripple', 'true');
@@ -170,7 +168,7 @@ function createAdvancedRipple(event) {
     }
 }
 
-// Enhanced scroll animations with stagger effect
+
 function initScrollAnimations() {
     const observerOptions = {
         threshold: 0.1,
@@ -192,7 +190,7 @@ function initScrollAnimations() {
         observer.observe(el);
     });
     
-    // Add CSS for animations
+  
     if (!document.querySelector('style[data-scroll-animate]')) {
         const style = document.createElement('style');
         style.setAttribute('data-scroll-animate', 'true');
@@ -214,7 +212,7 @@ function initScrollAnimations() {
     }
 }
 
-// Enhanced text effects with multiple glow layers
+
 function initTextEffects() {
     const headers = document.querySelectorAll('h2, h3');
     
@@ -235,7 +233,7 @@ function initTextEffects() {
     });
 }
 
-// Advanced mouse tracker with parallax and lighting
+
 function initMouseTracker() {
     const header = document.querySelector('header');
     
@@ -247,13 +245,13 @@ function initMouseTracker() {
                 const x = (e.clientX - rect.left) / rect.width;
                 const y = (e.clientY - rect.top) / rect.height;
                 
-                // Parallax effect
+         
                 const moveX = (x - 0.5) * 20;
                 const moveY = (y - 0.5) * 10;
                 
                 header.style.backgroundPosition = `${50 + moveX}% ${50 + moveY}%`;
                 
-                // Create subtle light effect
+    
                 const lightX = e.clientX - rect.left;
                 const lightY = e.clientY - rect.top;
                 
@@ -264,7 +262,7 @@ function initMouseTracker() {
     }
 }
 
-// Add subtle glow effect to interactive elements
+
 function initGlowEffect() {
     const style = document.createElement('style');
     style.textContent = `
@@ -290,9 +288,9 @@ function initGlowEffect() {
     document.head.appendChild(style);
 }
 
-// Custom cursor follower with new colors
+
 function initCursorFollower() {
-    // Create cursor follower elements
+
     const cursor = document.createElement('div');
     cursor.className = 'cursor-follower';
     cursor.style.cssText = `

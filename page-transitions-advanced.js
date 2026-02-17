@@ -1,5 +1,3 @@
-// Advanced Page Transitions with Gradient Sweep Effect
-
 class PageTransition {
     constructor() {
         this.isTransitioning = false;
@@ -61,7 +59,7 @@ class PageTransition {
         const footer = document.querySelector('footer');
         const screen = document.querySelector('.transition-screen');
         
-        // Stagger animations for elements moving out
+        
         if (footer) {
             footer.style.animation = 'slideOutDown 0.4s ease-in-out forwards';
         }
@@ -74,7 +72,7 @@ class PageTransition {
             header.style.animation = 'slideOutDown 0.6s ease-in-out 0.2s forwards';
         }
         
-        // Gradient sweep transition
+        
         if (screen) {
             screen.style.animation = 'gradientSweepIn 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards';
         }
@@ -93,7 +91,7 @@ class PageTransition {
         const main = document.querySelector('main');
         const footer = document.querySelector('footer');
         
-        // Set initial state for incoming elements
+       
         [header, main, footer].forEach(el => {
             if (el) {
                 el.style.opacity = '0';
@@ -101,7 +99,7 @@ class PageTransition {
             }
         });
         
-        // Stagger animation in with easing
+     
         setTimeout(() => {
             if (header) {
                 header.style.transition = 'all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1)';
@@ -126,7 +124,7 @@ class PageTransition {
             }
         }, 500);
         
-        // Clean up transitions
+      
         setTimeout(() => {
             [header, main, footer].forEach(el => {
                 if (el) el.style.transition = 'none';
@@ -193,12 +191,12 @@ class PageTransition {
     }
 }
 
-// Initialize on page load
+
 document.addEventListener('DOMContentLoaded', () => {
     new PageTransition();
 });
 
-// Re-initialize on back button
+
 window.addEventListener('pageshow', (event) => {
     if (event.persisted) {
         const pt = new PageTransition();
